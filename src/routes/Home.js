@@ -34,10 +34,12 @@ function mapStateToProps(state) {
   // 뭔가를 store에서 가져오고 싶을 떄 사용 => 가져와서 component의 props에 넣음
   // 첫 번째 argument: store에서 state를 가져옴
   // 두 번째 argument: component의 props
+  console.log(state);
   return { toDos: state };
 }
 
 function mapDispatchToProps(dispatch) {
+  console.log(dispatch);
   return {
     addToDo: (text) => dispatch(actionCreators.addToDo(text)),
   };
